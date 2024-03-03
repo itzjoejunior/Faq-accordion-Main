@@ -1,75 +1,86 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background: url(./assets/images/background-pattern-desktop.svg) no-repeat;
-    background-color: hsl(275, 100%, 97%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    align-items: center;
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(./assets/images/background-pattern-desktop.svg) no-repeat;
+  background-color: hsl(275, 100%, 97%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.container {
+  background: #fff;
+  max-width: 550px;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 15px;
+}
+
+.container .heading {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+}
+
+.container .heading h1 {
+  font-weight: 800;
+}
+
+.container .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container p {
+  color: hsl(292, 16%, 49%);
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.container .question img {
+  cursor: pointer;
+}
+
+.para {
+  display: none;
+}
+.para.active{
+  display: block
+}
+.minus{
+  display: none;
+}
+.minus.active{
+  display: block;
+}
+.plus.inactive{
+  display: none;
+}
+.container hr {
+  border: 1px solid #d3d3d3;
+}
+
+
+
+@media(width > 700px) {
   .container {
-    background: #fff;
-    width: 550px;
-    padding: 30px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border-radius: 15px;
+   max-width: 650px;
   }
-  
-  .container .heading {
-    display: flex;
-    gap: 20px;
-    text-align: center;
+}
+
+@media(width < 700px) {
+  .container {
+  max-width: 350px;
   }
-  
-  .container .heading h1 {
-    font-weight: 800;
-  }
-  
-  .container .question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .container p {
-    color: hsl(292, 16%, 49%);
-    font-size: 16px;
-    letter-spacing: 1px;
-  }
-  
-  .container .question img {
-    cursor: pointer;
-  }
-  
-  .minus {
-    display: none;
-  }
-  
-  .container hr {
-    border: 1px solid #d3d3d3;
-  }
-  
- 
-  
-  @media(width > 700px) {
-    .container {
-     max-width: 650px;
-    }
-  }
-  
-  @media(width < 700px) {
-    .container {
-    max-width: 350px;
-    }
-  }
+}
